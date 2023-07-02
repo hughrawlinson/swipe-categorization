@@ -44,6 +44,28 @@ according to the classification. I can then use `cat work.txt | xargs -I {} -n1
 equivalent command with "personal" substituted for "work" where appropriate to
 move the personal files.
 
+## Quickly filtering down a menu
+
+This example uses the short flags for options.
+
+`menu.txt`
+
+```
+tuna salad
+caesar salad
+garden salad
+ploughmans sandwich
+quiches lorraine
+vegan chocolate cake
+panna cotta
+```
+
+```sh
+swipe-categorization -l tasty -r bad -o tasty.txt -i menu.txt
+```
+
+Now `tasty.txt` contains all the menu items you chose from `menu.txt`
+
 # Installation
 
 ```sh
